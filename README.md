@@ -8,7 +8,7 @@
 | **项目名称** | Vibe Coding 全栈实战教程 |
 | **英文名称** | Vibe Vibe: From Scratch to Full Stack|
 | **项目副标题** | 写给所有人的 AI 编程入门与实战 |
-| **项目地址** | https://vc.nfeyre.top/ （暂定，后续会转移到datawhale）|
+| **项目地址** | www.vibevibe.cn |
 | **GitHub** | （待创建 Datawhale 仓库） |
 
 ### 2. 一句话介绍
