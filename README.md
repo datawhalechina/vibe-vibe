@@ -1,5 +1,13 @@
 # Vibe Vibe —— 人人都能学会的 AI 编程（Vibe Coding）指南
 - 点击以访问教程主页：www.vibevibe.cn
+<p align="center">
+ <a href='https://mapmyvisitors.com/web/1c0yh'  title='Visit tracker'>
+     <img src='https://mapmyvisitors.com/map.png?cl=080808&w=500&t=tt&d=U-O2EHPRXuWE3LRkAfA07tfWl3EMsjKKCXu6p0EO-Xg&co=ffffff&ct=808080' width="40%" />
+ </a>
+</p>
+
+
+
 ## 项目简介
 ### 1. 基本信息
 
