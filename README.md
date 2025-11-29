@@ -76,6 +76,17 @@
 | **进阶篇完成** | ✅ 掌握现代全栈技术栈（Next.js/TS/Prisma）<br>✅ 理解前后端分离架构<br>✅ 能独立开发带用户系统的完整应用<br>✅ 具备生产级部署和运维能力<br>✅ 建立工程化思维和协作规范 |
 
 
+## 贡献者名单
+
+| 姓名 | 职责 | 简介 |
+| :----| :---- | :---- |
+| 符航康 | 项目负责人 & 核心贡献者 | 湖南大学金融科技协会创始成员, 一名 AI 原生的年轻人, 希望成为一名优秀的智能体工程师|
+| [齐国皓](www.guohaoqi.cn) | 项目负责人 & 核心贡献者 | 现就读于[新加坡国立大学](https://www.comp.nus.edu.sg/)计算机学院, [湖南大学金融科技协会](https://github.com/HFT-Hunan-Uniiversity)创始人, [炬象未来](https://www.concretefutureai.com/)联合创始人, Research Intern @ NUS [NExT++ Research Center](https://www.nextcenter.org/) |
+| 陈俊希 | 「他们说」板块贡献者 | 湖南大学金融科技协会现任会长 |
+| 舒璐璐|面向文科生的Case | 湖南大学「麓山人文+」创始人 |
+
+
+
 ## 目录
 
 本教程分为**基础篇**和**进阶篇**两大板块，采用渐进式学习路径设计：
@@ -237,16 +248,6 @@
     ├── 12.6 爬虫基础
     └── 12.7 版本化与变更日志
 ```
-
-## 贡献者名单
-
-| 姓名 | 职责 | 简介 |
-| :----| :---- | :---- |
-| 符航康 | 项目负责人 & 核心贡献者 | 湖南大学金融科技协会创始成员, 一名 AI 原生的年轻人, 希望成为一名优秀的智能体工程师|
-| [齐国皓](www.guohaoqi.cn) | 项目负责人 & 核心贡献者 | 现就读于[新加坡国立大学](https://www.comp.nus.edu.sg/)计算机学院, [湖南大学金融科技协会](https://github.com/HFT-Hunan-Uniiversity)创始人, [炬象未来](https://www.concretefutureai.com/)联合创始人, Research Intern @ NUS [NExT++ Research Center](https://www.nextcenter.org/) |
-| 陈俊希 | 「他们说」板块贡献者 | 湖南大学金融科技协会现任会长 |
-| 舒璐璐|面向文科生的Case | 湖南大学「麓山人文+」创始人 |
-
 
 ## 参与贡献
 
