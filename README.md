@@ -1,4 +1,4 @@
-# Vibe Vibe: From Scratch to Full Stack——人人都能学会的 AI 编程（Vibe Coding）指南
+# Vibe Vibe —— 人人都能学会的 AI 编程（Vibe Coding）指南
 - 点击以访问教程主页：www.vibevibe.cn
 ## 项目简介
 ### 1. 基本信息
