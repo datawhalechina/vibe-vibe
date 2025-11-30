@@ -53,8 +53,8 @@
 
 | 姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 职责 | 简介 |
 | :----| :---- | :---- |
-| 符航康 | 项目负责人 & 核心贡献者 | 湖南大学金融科技协会创始成员, 一名 AI 原生的年轻人, 希望成为一名优秀的智能体工程师|
 | [齐国皓](www.guohaoqi.cn) | 项目负责人 & 核心贡献者 | 现就读于[新加坡国立大学](https://www.comp.nus.edu.sg/)计算机学院, [湖南大学金融科技协会](https://github.com/HFT-Hunan-Uniiversity)创始人, [炬象未来](https://www.concretefutureai.com/)联合创始人, Research Intern @ NUS [NExT++ Research Center](https://www.nextcenter.org/) |
+| 符航康 | 项目负责人 & 核心贡献者 | 湖南大学金融科技协会创始成员, 一名 AI 原生的年轻人, 希望成为一名优秀的智能体工程师|
 | 陈俊希 | 「他们说」板块贡献者 | 湖南大学金融科技协会现任会长 |
 | 舒璐璐 | 面向文科生的Case | 湖南大学「麓山人文+」创始人 |
 
