@@ -2,12 +2,25 @@
 > **面向零编程基础学习者的 AI 辅助编程系统化教程，从「我有一个想法」到「我做出了一个产品」，让人人都能成为 Builder。**
 
 - 点击以访问教程主页：www.vibevibe.cn
+<!--
 <p align="center">
  <a href='https://mapmyvisitors.com/web/1c0yh'  title='Visit tracker'>
      <img src='https://mapmyvisitors.com/map.png?cl=080808&w=500&t=tt&d=U-O2EHPRXuWE3LRkAfA07tfWl3EMsjKKCXu6p0EO-Xg&co=ffffff&ct=808080' width="40%" />
  </a>
 </p>
+-->
 
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://api.star-history.com/svg?repos=datawhalechina/vibe-vibe&type=Date" alt="Star History Chart" width="100%">
+    </td>
+    <td width="50%">
+      <a href='https://mapmyvisitors.com/web/1c0yh'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=080808&w=500&t=tt&d=U-O2EHPRXuWE3LRkAfA07tfWl3EMsjKKCXu6p0EO-Xg&co=ffffff&ct=808080'/></a>
+    </td>
+  </tr>
+</table>
 
 ### 核心理念
 
