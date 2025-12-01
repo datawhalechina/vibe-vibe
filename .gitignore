@@ -1,0 +1,19 @@
+temp
+.idea
+.vscode 
+.trae
+.factory
+node_modules
+.DS_Store
+dist
+cache
+.temp
+.vitepress/dist
+.vitepress/cache
+ai-write-guide
+docs/docs
+
+# Python
+rename_docs.py
+*.pyc
+__pycache__

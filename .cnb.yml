@@ -1,0 +1,38 @@
+# .cnb.yml
+$:
+  vscode:
+    - runner:
+        cpus: 16
+      docker:
+        image: docker.cnb.cool/eyre921/default-dev-env:latest
+      services:
+        - vscode
+        - docker
+      # 开发环境启动后会执行的任务
+      stages:
+        - name: start 1P
+          script: 1pctl start all
+        - name: install env
+          script: pnpm install && pnpm docs:build 
+
+# .cnb.yml
+
+main:
+  push:
+    - imports:
+        - https://cnb.cool/eyre921/secret/-/blob/main/edgeone-pages-env.yml
+      runner:
+        cpus: 32
+      docker:
+        image: docker.cnb.cool/eyre921/default-dev-env:latest
+      
+      stages:
+        - name: Build Site
+          script:
+            - pnpm i
+            - pnpm docs:build
+
+        - name: Deploy to EdgeOne Pages
+          script:
+            - npm install -g edgeone 
+            - npx edgeone pages deploy ./docs/.vitepress/dist -n vibe-vibe --force -t $EDGEONE_API_TOKEN
