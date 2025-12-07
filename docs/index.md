@@ -14,6 +14,12 @@ hero:
     - theme: alt
       text: 有基础进阶
       link: /Advanced/
+    - theme: alt
+      text: 动手做项目
+      link: /Practice/
+    - theme: alt
+      text: 优质好文章
+      link: /Articles/
 
 features:
   - title: 零基础友好
@@ -177,7 +183,7 @@ features:
 
 **基础篇**：HTML/CSS/JS 基础 · AI 工具 (ChatGPT/Claude/Cursor) · 版本控制入门 · 静态部署
 
-**进阶篇**：Next.js 14/15+ · TypeScript · PostgreSQL + Prisma · Tailwind CSS + shadcn/ui · NextAuth.js · Docker · Vercel
+**进阶篇**：Next.js · TypeScript · PostgreSQL + Prisma · Tailwind CSS + shadcn/ui · NextAuth.js · Docker · Vercel · Edgeone
 
 </div>
 
