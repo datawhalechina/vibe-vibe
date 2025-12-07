@@ -47,6 +47,12 @@ export default withMermaid(defineConfig({
   vite: {
     ssr: {
       noExternal: ['vitepress-plugin-mermaid', 'mermaid']
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+      strictPort: false,
+      allowedHosts: true
     }
   },
 
@@ -64,7 +70,7 @@ export default withMermaid(defineConfig({
           { text: '2. 心法：核心思维', link: '/Basic/02-mindset/' },
           { text: '3. 技术：从想法到产品', link: '/Basic/03-technique/' },
           { text: '4. 从 0 到 1 实战', link: '/Basic/04-practice-0-to-1/' },
-          { text: '5. 进阶技能', link: '/Basic/05-advanced/' },
+          { text: '5. 精进技能', link: '/Basic/05-advanced/' },
           { text: '附录', link: '/Basic/99-appendix/' },
           { text: '结语', link: '/Basic/100-epilogue/' },
           { text: '下部预告', link: '/Basic/101-next-part/' },
