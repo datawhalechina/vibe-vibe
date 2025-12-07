@@ -188,6 +188,11 @@ export default withMermaid(defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Eyre921/awesone-vibe-coding-tutorial' }
-    ]
+    ],
+
+    footer: {
+      message: '',
+      copyright: '<a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2024097797号-3</a>'
+    }
   }
 }))
