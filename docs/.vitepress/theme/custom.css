@@ -151,3 +151,52 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* 过去vs现在对比 */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.compare-card {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.compare-past {
+  background: rgba(255, 100, 100, 0.05);
+  border-color: rgba(255, 100, 100, 0.3);
+}
+
+.compare-now {
+  background: rgba(100, 200, 100, 0.05);
+  border-color: rgba(100, 200, 100, 0.3);
+}
+
+.compare-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.compare-flow {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.compare-result {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.compare-past .compare-result { color: #e53935; }
+.compare-now .compare-result { color: #43a047; }
+
+@media (max-width: 640px) {
+  .compare-grid { grid-template-columns: 1fr; }
+}
