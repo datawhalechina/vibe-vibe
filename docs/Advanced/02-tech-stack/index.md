@@ -39,7 +39,7 @@ mindmap
 
 | 层级 | 技术选型 | 核心价值 |
 |------|----------|----------|
-| **框架** | Next.js 14+ (App Router) | 全栈能力、极致性能 |
+| **框架** | Next.js 16+ (App Router) | 全栈能力、极致性能 |
 | **语言** | TypeScript | 类型安全、AI 友好 |
 | **数据库** | PostgreSQL + Prisma | 类型安全 ORM、强大生态 |
 | **样式** | Tailwind CSS + shadcn/ui | 原子化 CSS、开箱即用组件 |

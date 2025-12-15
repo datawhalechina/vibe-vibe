@@ -64,7 +64,7 @@ graph TB
 ```
 基于上面的需求，请帮我设计技术方案。
 
-技术栈：Next.js 14 + TypeScript + Tailwind CSS + Prisma
+技术栈：Next.js 16 + TypeScript + Tailwind CSS + Prisma
 
 请考虑：
 1. 数据结构设计
@@ -112,7 +112,7 @@ AI 的记忆有限，需要主动管理上下文：
 # 项目规则
 
 ## 技术栈
-- Next.js 14 (App Router)
+- Next.js 16 (App Router)
 - TypeScript (严格模式)
 - Tailwind CSS
 - Prisma + PostgreSQL

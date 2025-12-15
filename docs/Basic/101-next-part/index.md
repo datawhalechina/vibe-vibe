@@ -55,7 +55,7 @@ flowchart LR
 
 | 层级 | 技术选型 | 为什么选它 |
 |:----:|:---------|:-----------|
-| **框架** | Next.js 14+ (App Router) | 全栈能力、极致性能、AI 友好 |
+| **框架** | Next.js 16+ (App Router) | 全栈能力、极致性能、AI 友好 |
 | **语言** | TypeScript | 类型安全、减少 Bug、AI 生成代码更可靠 |
 | **数据库** | PostgreSQL + Prisma | 类型安全 ORM、强大生态 |
 | **样式** | Tailwind CSS + shadcn/ui | 原子化 CSS、开箱即用组件 |

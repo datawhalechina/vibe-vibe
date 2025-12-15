@@ -98,7 +98,7 @@ graph TD
 
 ```
 // 这里的 params 是 Next.js 自动传入的
-// 注意：params 在 Next.js 15+ 中可能是异步的，具体视版本而定，但在 Vibe Coding 体系中我们通常直接解构
+// 注意：params 在 Next.js 16+ 中可能是异步的，具体视版本而定，但在 Vibe Coding 体系中我们通常直接解构
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   // 1. 获取 URL 上的参数
   const { slug } = params; 

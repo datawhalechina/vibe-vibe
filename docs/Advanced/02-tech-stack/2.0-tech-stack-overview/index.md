@@ -24,7 +24,7 @@ AI 模型的训练数据决定了它对某些技术栈的理解更深入、代�
 ```mermaid
 flowchart TB
     subgraph Frontend["前端层"]
-        Next["Next.js 14+<br/>App Router"]
+        Next["Next.js 16+<br/>App Router"]
         React["React 18+"]
         TS["TypeScript 5+"]
         Tailwind["Tailwind CSS"]
@@ -161,5 +161,5 @@ const user = await prisma.user.findUnique({
 3. 让 AI 基于本课程技术栈给出具体配置建议
 
 ::: warning 避坑提示
-不要让 AI 随意推荐技术栈。明确告诉它："基于 Next.js 14 App Router + TypeScript + Prisma 技术栈"，避免 AI 推荐过时或不兼容的方案。
+不要让 AI 随意推荐技术栈。明确告诉它："基于 Next.js 16 App Router + TypeScript + Prisma 技术栈"，避免 AI 推荐过时或不兼容的方案。
 :::
