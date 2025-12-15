@@ -22,15 +22,15 @@ export default {
         
         return h('div', { style: { marginTop: '2rem' } }, [
           h(Giscus, {
-            repo: "Eyre921/awesone-vibe-coding-tutorial", 
-            repoId: "R_kgDOQcvVXQ", 
-            category: "Announcements",
-            categoryId: "DIC_kwDOQcvVXc4CzAyd", 
+            repo: "datawhalechina/vibe-vibe",
+            repoId: "R_kgDOQerM_g",
+            category: "General",
+            categoryId: "DIC_kwDOQerM_s4CzzOf",
             mapping: "pathname",
             strict: "0",
             reactionsEnabled: "1",
-            emitMetadata: "0",
-            inputPosition: "top",
+            emitMetadata: "1",
+            inputPosition: "bottom",
             theme: "preferred_color_scheme",
             lang: "zh-CN",
             loading: "lazy"
