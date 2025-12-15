@@ -98,6 +98,35 @@
   line-height: 1.5;
 }
 
+/* 顶部提示条样式及布局调整 */
+:root {
+  --vp-layout-top-height: 0px;
+}
+
+.info-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+}
+
+.VPNav {
+  top: var(--vp-layout-top-height) !important;
+}
+
+.VPSidebar {
+  top: calc(var(--vp-nav-height) + var(--vp-layout-top-height)) !important;
+}
+
+.VPLocalNav {
+  top: var(--vp-layout-top-height) !important;
+}
+
+.Layout {
+  padding-top: var(--vp-layout-top-height) !important;
+}
+
 @media (max-width: 640px) {
   .outcome-grid {
     grid-template-columns: 1fr;

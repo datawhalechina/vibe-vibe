@@ -67,11 +67,7 @@ typora-root-url: ../public
 - **有编程经验但不熟悉 TypeScript**：重点学习 0.4 和 0.5
 - **前端开发者想学全栈**：重点学习 0.1、0.7 以及后续章节
 - **后端开发者想了解现代前端**：重点学习 0.3 系列
-:::
 
-## 关于内容质量
-
-本项目大部分内容由 AI 辅助生成，可能存在术语不够精确、代码示例过时等情况。我们正在持续优化，欢迎通过 [GitHub Issues](https://github.com/Eyre921/awesone-vibe-coding-tutorial/issues) 反馈问题。
 
 ## 开始学习
 

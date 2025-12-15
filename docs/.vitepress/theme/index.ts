@@ -16,6 +16,19 @@ export default {
     const { frontmatter, isDark } = useData();
     
     return h(DefaultTheme.Layout, null, {
+      'layout-top': () => {
+        return h('div', {
+          class: 'info-banner',
+          style: {
+            background: '#e6a23c',
+            color: '#fff',
+            padding: '8px',
+            textAlign: 'center',
+            fontSize: '14px',
+            lineHeight: '1.5'
+          }
+        }, '本版本为内部预览版，并非正式发行版本，不代表最终品质')
+      },
       'doc-after': () => {
         // 如果页面 Frontmatter 设置了 comment: false，则不显示评论
         if (frontmatter.value.comment === false) return null;
@@ -52,6 +65,18 @@ export default {
 
     onMounted(() => {
       initZoom()
+      
+      // 动态计算 Banner 高度并设置 CSS 变量
+      const updateBannerHeight = () => {
+        const banner = document.querySelector('.info-banner')
+        if (banner) {
+          const height = (banner as HTMLElement).offsetHeight
+          document.documentElement.style.setProperty('--vp-layout-top-height', `${height}px`)
+        }
+      }
+      
+      updateBannerHeight()
+      window.addEventListener('resize', updateBannerHeight)
     })
 
     // 监听路由变化，确保切换页面后图片依然可以放大
