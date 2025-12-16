@@ -20,8 +20,6 @@ $:
         - name: droid-key
           script: dk add $FACTORY_API_KEY
 
-# .cnb.yml
-
 master:
   push:
     - &docs_deploy_pipeline
@@ -74,6 +72,9 @@ develop:
           type: git:auto-merge
           options:
             mergeType: squash
+            mergeCommitMessage: $CNB_LATEST_COMMIT_MESSAGE
+            removeSourceBranch: true
+            ignoreAssignee: true
   pull_request.merged:
     - <<: *docs_deploy_pipeline
       env:
@@ -82,3 +83,4 @@ develop:
       stages:
         - *docs_build_stage
         - *edgeone_deploy_stage
+
