@@ -66,9 +66,9 @@ develop:
   pull_request.mergeable:
     - name: pr-auto-merge
       runner:
-        cpus: 1
+        cpus: 8
       docker:
-        image: node:20
+        image: docker.cnb.cool/eyre921/default-dev-env:latest
       stages:
         - name: auto merge
           type: git:auto-merge
