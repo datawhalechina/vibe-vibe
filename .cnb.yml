@@ -24,40 +24,61 @@ $:
 
 master:
   push:
-    - imports:
+    - &docs_deploy_pipeline
+      imports:
         - https://cnb.cool/eyre921/secret/-/blob/main/edgeone-pages-env.yml
       runner:
         cpus: 8
       docker:
         image: docker.cnb.cool/eyre921/default-dev-env:latest
+      env:
+        EDGEONE_PROJECT_NAME: vibe-vibe-production
       
       stages:
-        - name: Build Site
+        - &docs_build_stage
+          name: Build Site
           script:
-            - pnpm i
+            - pnpm install --frozen-lockfile
             - pnpm build
-
-        - name: Deploy to EdgeOne Pages
+        - &edgeone_deploy_stage
+          name: Deploy to EdgeOne Pages
           script:
-            - npm install -g edgeone 
-            - npx edgeone pages deploy ./docs/.vitepress/dist -n vibe-vibe-production --force -t $EDGEONE_API_TOKEN
+            - npx -y edgeone pages deploy ./docs/.vitepress/dist -n $EDGEONE_PROJECT_NAME --force -t $EDGEONE_API_TOKEN
 
 develop:
-  push:
-    - imports:
-        - https://cnb.cool/eyre921/secret/-/blob/main/edgeone-pages-env.yml
+  pull_request:
+    - name: pr-build
       runner:
         cpus: 8
       docker:
         image: docker.cnb.cool/eyre921/default-dev-env:latest
+      stages:
+        - name: prepare pnpm
+          script:
+            - corepack enable
+            - corepack prepare pnpm@10.21.0 --activate
+        - name: install
+          script:
+            - pnpm install --frozen-lockfile
+        - name: build
+          script:
+            - pnpm build
+  pull_request.mergeable:
+    - name: pr-auto-merge
+      runner:
+        cpus: 8
+      docker:
+        image: docker.cnb.cool/eyre921/default-dev-env:latest
+      stages:
+        - name: auto merge
+          type: git:auto-merge
+          options:
+            mergeType: squash
+  pull_request.merged:
+    - <<: *docs_deploy_pipeline
+      env:
+        EDGEONE_PROJECT_NAME: vibe-vibe-develop
       
       stages:
-        - name: Build Site
-          script:
-            - pnpm i
-            - pnpm build
-
-        - name: Deploy to EdgeOne Pages
-          script:
-            - npm install -g edgeone 
-            - npx edgeone pages deploy ./docs/.vitepress/dist -n vibe-vibe-develop --force -t $EDGEONE_API_TOKEN
+        - *docs_build_stage
+        - *edgeone_deploy_stage
