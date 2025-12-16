@@ -3,8 +3,8 @@ import { generateSidebar } from 'vitepress-sidebar'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 // @ts-ignore
 import timeline from "vitepress-markdown-timeline";
-import { writeFile } from 'node:fs/promises'
-import { join as joinPath } from 'node:path'
+import { writeFile } from 'fs/promises'
+import { join as joinPath } from 'path'
 
 const SITE_TITLE = "Vibe Coding 全栈实战教程"
 const SITE_DESCRIPTION = "从 Next.js 到 AI 辅助开发，用 Vibe Coding 的方式重塑你的编程工作流。涵盖零基础入门、全栈开发、数据库、部署运维等 12 个核心章节。"
@@ -80,8 +80,8 @@ export default withMermaid(defineConfig({
   },
 
   buildEnd: async (siteConfig) => {
-    const sitemapLine = SITE_URL ? `Sitemap: ${SITE_URL}/sitemap.xml` : 'Sitemap: /sitemap.xml';
-    const content = `User-agent: *\nAllow: /\n\n${sitemapLine}\n`;
+    const sitemapLine = SITE_URL ? `\nSitemap: ${SITE_URL}/sitemap.xml\n` : '\n';
+    const content = `User-agent: *\nAllow: /${sitemapLine}`;
     await writeFile(joinPath(siteConfig.outDir, 'robots.txt'), content, 'utf-8');
   },
 
