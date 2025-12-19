@@ -7,7 +7,7 @@ import { writeFile } from 'fs/promises'
 import { join as joinPath } from 'path'
 
 const SITE_TITLE = "Vibe Coding 全栈实战教程"
-const SITE_DESCRIPTION = "从 Next.js 到 AI 辅助开发，用 Vibe Coding 的方式重塑你的编程工作流。涵盖零基础入门、全栈开发、数据库、部署运维等 12 个核心章节。"
+const SITE_DESCRIPTION = "从 Next.js 到 AI 辅助开发，用 Vibe Coding 的方式重塑你的编程工作流。涵盖零基础入门、全栈开发、数据库、部署运维等核心主题。"
 
 function normalizeSiteUrl(url: string): string {
   return url.trim().replace(/\/+$/, '');
@@ -129,9 +129,11 @@ export default withMermaid(defineConfig({
     
     nav: [
       { text: '首页', link: '/' },
-      { 
-        text: '基础篇', 
+
+      {
+        text: '基础篇',
         items: [
+          { text: '导览', link: '/Basic/' },
           { text: '0. 序章', link: '/Basic/00-preface/' },
           { text: '1. 觉醒：从码农到指挥官', link: '/Basic/01-awakening/' },
           { text: '2. 心法：核心思维', link: '/Basic/02-mindset/' },
@@ -143,15 +145,33 @@ export default withMermaid(defineConfig({
           { text: '下部预告', link: '/Basic/101-next-part/' },
         ]
       },
-      { 
-        text: '进阶篇', 
+
+      {
+        text: '进阶篇',
         items: [
-          { text: '进阶草稿（已下线）', link: '/Advanced/' },
+          { text: '导览', link: '/Advanced/' },
+          { text: '进阶版（旧）', link: '/Advanced-old/' },
+          { text: '第一章：环境搭建', link: '/Advanced/01-environment-setup/' },
+          { text: '第二章：开发工具', link: '/Advanced/02-dev-tools-ai-tuning/' },
+          { text: '第三章：PRD 与文档', link: '/Advanced/03-prd-doc-driven/' },
+          { text: '第四章：运行与构建', link: '/Advanced/04-build-and-runtime-modes/' },
+          { text: '第五章：UI/UX', link: '/Advanced/05-ui-ux/' },
+          { text: '第六章：环境变量', link: '/Advanced/06-env-vars-secrets/' },
+          { text: '第七章：数据库', link: '/Advanced/07-data-persistence-database/' },
+          { text: '第八章：测试', link: '/Advanced/08-testing-automation/' },
+          { text: '第九章：公网访问', link: '/Advanced/09-localhost-public-access/' },
+          { text: '第十章：Git 协作', link: '/Advanced/10-git-collaboration/' },
+          { text: '第十一章：CI/CD', link: '/Advanced/11-serverless-deploy-cicd/' },
+          { text: '第十二章：域名与 DNS', link: '/Advanced/12-domain-dns/' },
+          { text: '第十三章：云服务器', link: '/Advanced/13-vps-ops-deploy/' },
+          { text: '第十四章：安全与 SEO', link: '/Advanced/14-security-seo-analytics/' },
         ]
       },
-      { 
-        text: '实践篇', 
+
+      {
+        text: '实践篇',
         items: [
+          { text: '导览', link: '/Practice/' },
           { text: '文科生/商科生项目', link: '/Practice/01-for-liberal-arts/' },
           { text: '理工科学生项目', link: '/Practice/02-for-stem/' },
           { text: '职场人士项目', link: '/Practice/03-for-professionals/' },
@@ -161,9 +181,11 @@ export default withMermaid(defineConfig({
           { text: '工具与效率', link: '/Practice/13-tools-integration/' },
         ]
       },
-      { 
-        text: '优质文章篇', 
+
+      {
+        text: '优质文章篇',
         items: [
+          { text: '导览', link: '/Articles/' },
           { text: '知名公司博客', link: '/Articles/01-company-blogs/' },
           { text: '优质播客', link: '/Articles/02-podcasts/' },
           { text: '研究报告', link: '/Articles/03-research-reports/' },
@@ -185,7 +207,7 @@ export default withMermaid(defineConfig({
       frontmatterOrderDefaultValue: 9999,
       
       manualSortFileNameByPriority: [
-        'Basic', 'Advanced', 'Practice', 'Articles',
+        'Basic', 'Advanced', 'Advanced-old', 'Practice', 'Articles',
         'Basic/00-preface', 'Basic/01-awakening', 'Basic/02-mindset', 'Basic/03-technique',
         'Basic/04-practice-0-to-1', 'Basic/05-advanced', 'Basic/06-learning-paths', 
         'Basic/99-appendix', 'Basic/100-epilogue', 'Basic/101-next-part',

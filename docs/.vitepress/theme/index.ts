@@ -27,7 +27,7 @@ export default {
             fontSize: '14px',
             lineHeight: '1.5'
           }
-        }, '当前版本内部预览版，内容有待优化调整，并非正式发行版本，不代表最终品质')
+        }, '抢先预览版，内容调整中，不代表最终品质')
       },
       'doc-after': () => {
         // 如果页面 Frontmatter 设置了 comment: false，则不显示评论
