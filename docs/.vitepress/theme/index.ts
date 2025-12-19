@@ -13,6 +13,7 @@ export default {
   
   // 1. 布局扩展：注入 Giscus 评论
   Layout: () => {
+    const route = useRoute()
     const { frontmatter, isDark } = useData();
     
     return h(DefaultTheme.Layout, null, {
@@ -35,6 +36,7 @@ export default {
         
         return h('div', { style: { marginTop: '2rem' } }, [
           h(Giscus, {
+            key: `${route.path}::${isDark.value ? 'dark' : 'light'}`,
             repo: "datawhalechina/vibe-vibe",
             repoId: "R_kgDOQerM_g",
             category: "General",
