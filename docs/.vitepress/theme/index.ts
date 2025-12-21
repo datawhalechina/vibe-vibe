@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import { onMounted, watch, nextTick, h } from 'vue'
+import { onMounted, watch, nextTick, h, type VNode } from 'vue'
 import { useRoute, useData } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import Giscus from '@giscus/vue'
@@ -31,26 +31,60 @@ export default {
         }, '抢先预览版，内容调整中，不代表最终品质')
       },
       'doc-after': () => {
-        // 如果页面 Frontmatter 设置了 comment: false，则不显示评论
-        if (frontmatter.value.comment === false) return null;
-        
-        return h('div', { style: { marginTop: '2rem' } }, [
-          h(Giscus, {
-            key: `${route.path}::${isDark.value ? 'dark' : 'light'}`,
-            repo: "datawhalechina/vibe-vibe",
-            repoId: "R_kgDOQerM_g",
-            category: "General",
-            categoryId: "DIC_kwDOQerM_s4CzzOf",
-            mapping: "pathname",
-            strict: "0",
-            reactionsEnabled: "1",
-            emitMetadata: "1",
-            inputPosition: "bottom",
-            theme: isDark.value ? "dark_dimmed" : "light",
-            lang: "zh-CN",
-            loading: "lazy"
-          })
-        ])
+        const children: VNode[] = [
+          h('div', { class: 'feedback-tip' }, [
+            h('strong', null, '反馈与建议：'),
+            '发现内容有误或想补充？欢迎在下方评论区留言，或到 ',
+            h(
+              'a',
+              {
+                href: 'https://github.com/datawhalechina/vibe-vibe/issues',
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              },
+              'GitHub 提 Issue'
+            ),
+            ,
+            h('div', { class: 'feedback-actions' }, [
+              h('span', { class: 'github-star-text' }, '点我给个 Star 吧：'),
+              h('span', { class: 'github-star-wrap' }, [
+                h('iframe', {
+                  class: 'github-star-btn',
+                  src: 'https://ghbtns.com/github-btn.html?user=datawhalechina&repo=vibe-vibe&type=star&count=false&size=large',
+                  title: 'GitHub',
+                  height: '30',
+                  width: '120',
+                  scrolling: '0',
+                  frameborder: '0'
+                })
+              ])
+            ])
+          ])
+        ];
+
+        if (frontmatter.value.comment !== false) {
+          children.push(
+            h('div', { style: { marginTop: '2rem' } }, [
+              h(Giscus, {
+                key: `${route.path}::${isDark.value ? 'dark' : 'light'}`,
+                repo: "datawhalechina/vibe-vibe",
+                repoId: "R_kgDOQerM_g",
+                category: "General",
+                categoryId: "DIC_kwDOQerM_s4CzzOf",
+                mapping: "pathname",
+                strict: "0",
+                reactionsEnabled: "1",
+                emitMetadata: "1",
+                inputPosition: "bottom",
+                theme: isDark.value ? "dark_dimmed" : "light",
+                lang: "zh-CN",
+                loading: "lazy"
+              })
+            ])
+          );
+        }
+
+        return h('div', null, children)
       }
     })
   },

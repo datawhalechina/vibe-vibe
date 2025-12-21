@@ -4,9 +4,9 @@ title: "第二章：开发工具与 AI 调教指南"
 
 # 第二章：开发工具与 AI 调教指南
 ## 序言
-环境装好了，你手里握着一份庞大的工具清单，面对 **Deepseek、豆包、千问、GLM、GPT、Claude、Gemini** 这些模型，还有 **Cursor、Trae、Windsurf** 甚至 **Qoder、Code Buddy** 这些编辑器，以及 **Claude Code, CodeX, Qoder CLI, Droid CLI, Warp** 等各种 CLI 命令行工具，你彻底晕了。
+环境装好了，你手里握着一份庞大的工具清单，面对 **Deepseek, 豆包, 千问, GLM, GPT, Claude, Gemini** 这些模型，还有 **Cursor, Trae, Windsurf** , **Qoder, Code Buddy** 这些编辑器，以及 **Claude Code, CodeX, Qoder CLI, Droid CLI, Warp** 等各种 CLI 命令行工具，你彻底晕了。
 
-你不知道它们之间有什么区别。经过老师傅的介绍，你终于明白了：**模型决定推理能力的上限，工具决定代码实现的效率。** 最终，你确定了适合自己的组合。
+你不知道它们之间有什么区别。经过老师傅的介绍，你终于明白了：**模型决定代码能力的速度和上限，工具决定代码实现的方式和效率。** 最终，你确定了适合自己的组合。
 
 你想了一个 Demo 随便试了一下，发现 AI 给的方案五花八门，有时候想按照自己的心意修改，结果改了这里坏了那里，引发连锁问题。
 

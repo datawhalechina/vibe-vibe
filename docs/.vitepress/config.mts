@@ -52,6 +52,14 @@ export default withMermaid(defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
     ['link', { rel: 'shortcut icon', href: '/logo.png', type: 'image/png' }],
+    [
+      'script',
+      {
+        defer: '',
+        src: 'https://u.vibevibe.cn/script.js',
+        'data-website-id': 'a1b0c652-8f34-4bc2-8c42-40fcaf521c9d'
+      }
+    ],
   ],
 
   ...(SITE_URL ? { sitemap: { hostname: SITE_URL } } : {}),

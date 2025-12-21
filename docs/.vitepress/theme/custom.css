@@ -18,6 +18,68 @@
   border-top: 1px solid var(--vp-c-divider);
 }
 
+.feedback-tip {
+  margin-top: 2rem;
+  padding: 12px 14px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.feedback-tip strong {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.feedback-tip a {
+  color: var(--vp-c-brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.feedback-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.github-star-text {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+.github-star-btn {
+  border: 0;
+}
+
+.github-star-wrap {
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--vp-c-bg-soft);
+}
+
+.github-star-btn {
+  display: block;
+  background: transparent;
+}
+
+.dark .github-star-wrap {
+  background: #202127;
+}
+
+.dark .github-star-btn {
+  filter: invert(0.9) hue-rotate(180deg) saturate(0.9) brightness(1.05) contrast(0.95);
+}
+
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #15a051ff 30%, #2eb3dfff );
