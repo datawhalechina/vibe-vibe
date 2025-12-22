@@ -17,7 +17,7 @@ docs/docs
 rename_docs.py
 *.pyc
 __pycache__
-
+docs/dev-dist
 # 项目内部文档
 VibeVibe 项目协作与开发指南.md
 scripts/

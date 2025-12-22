@@ -3,11 +3,12 @@ import { generateSidebar } from 'vitepress-sidebar'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 // @ts-ignore
 import timeline from "vitepress-markdown-timeline";
+import { VitePWA } from 'vite-plugin-pwa'
 import { writeFile } from 'fs/promises'
 import { join as joinPath } from 'path'
 
-const SITE_TITLE = "Vibe Coding 全栈实战教程"
-const SITE_DESCRIPTION = "从 Next.js 到 AI 辅助开发，用 Vibe Coding 的方式重塑你的编程工作流。涵盖零基础入门、全栈开发、数据库、部署运维等核心主题。"
+const SITE_TITLE = "VibeVibe"
+const SITE_DESCRIPTION = "Vibe Coding 全栈实战教程 - 从 Next.js 到 AI 辅助开发，用 Vibe Coding 的方式重塑你的编程工作流。涵盖零基础入门、全栈开发、数据库、部署运维等核心主题。"
 
 function normalizeSiteUrl(url: string): string {
   return url.trim().replace(/\/+$/, '');
@@ -49,9 +50,11 @@ export default withMermaid(defineConfig({
     ['meta', { name: 'baidu-site-verification', content: 'codeva-DyDGMBlEJg' }],
     ['meta', { name: 'keywords', content: 'Vibe Coding, 全栈开发, Next.js, TypeScript, React, Prisma, AI编程, Cursor, Claude' }],
     ['meta', { name: 'author', content: 'Eyre' }],
+    ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['link', { rel: 'icon', href: '/logo.png', type: 'image/png' }],
     ['link', { rel: 'shortcut icon', href: '/logo.png', type: 'image/png' }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     [
       'script',
       {
@@ -120,6 +123,44 @@ export default withMermaid(defineConfig({
 
 
   vite: {
+    plugins: [
+      VitePWA({
+        registerType: 'autoUpdate',
+        injectRegister: 'auto',
+        manifestFilename: 'manifest.webmanifest',
+        includeAssets: ['logo.png', 'logo.svg'],
+        devOptions: {
+          enabled: true
+        },
+        workbox: {
+          maximumFileSizeToCacheInBytes: 10 * 1024 * 1024
+        },
+        manifest: {
+          name: SITE_TITLE,
+          short_name: 'Vibe Vibe',
+          description: SITE_DESCRIPTION,
+          theme_color: '#ffffff',
+          background_color: '#ffffff',
+          display: 'standalone',
+          start_url: '/',
+          scope: '/',
+          icons: [
+            {
+              src: '/logo.svg',
+              sizes: 'any',
+              type: 'image/svg+xml',
+              purpose: 'any'
+            },
+            {
+              src: '/logo.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any'
+            }
+          ]
+        }
+      })
+    ],
     ssr: {
       noExternal: ['vitepress-plugin-mermaid', 'mermaid']
     },

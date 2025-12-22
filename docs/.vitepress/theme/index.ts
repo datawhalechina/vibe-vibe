@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import { onMounted, watch, nextTick, h, type VNode } from 'vue'
+import { onMounted, watch, nextTick, h, type VNode, defineComponent, ref } from 'vue'
 import { useRoute, useData } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import Giscus from '@giscus/vue'
@@ -7,6 +7,86 @@ import Giscus from '@giscus/vue'
 // 引入时间线样式
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import './custom.css' // 稍后创建这个文件，用于微调样式
+
+type BeforeInstallPromptUserChoice = {
+  outcome: 'accepted' | 'dismissed'
+  platform: string
+}
+
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>
+  userChoice: Promise<BeforeInstallPromptUserChoice>
+}
+
+const PwaInstallButton = defineComponent({
+  name: 'PwaInstallButton',
+  setup() {
+    const canInstall = ref(false)
+    const deferredPrompt = ref<BeforeInstallPromptEvent | null>(null)
+    const isStandalone = ref(false)
+    const isPwaSupported = ref(false)
+
+    const updateStandalone = () => {
+      const navigatorWithStandalone = window.navigator as Navigator & { standalone?: boolean }
+      isStandalone.value =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        navigatorWithStandalone.standalone === true
+    }
+
+    onMounted(() => {
+      isPwaSupported.value =
+        window.isSecureContext &&
+        'serviceWorker' in navigator
+
+      if (isPwaSupported.value) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(() => null)
+      }
+
+      updateStandalone()
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault()
+        deferredPrompt.value = e as BeforeInstallPromptEvent
+        canInstall.value = true
+      })
+
+      window.addEventListener('appinstalled', () => {
+        canInstall.value = false
+        deferredPrompt.value = null
+        updateStandalone()
+      })
+    })
+
+    const onClick = async () => {
+      const promptEvent = deferredPrompt.value
+      if (!promptEvent) {
+        window.alert('当前浏览器未触发“安装”事件。\n\n可尝试：\n1) 用 Chrome / Edge 打开（需 https 或 localhost）\n2) 刷新页面后浏览几次（触发用户交互）\n3) 右上角菜单 → “安装此应用/安装到设备”')
+        return
+      }
+
+      await promptEvent.prompt()
+      try {
+        await promptEvent.userChoice
+      } finally {
+        canInstall.value = false
+        deferredPrompt.value = null
+      }
+    }
+
+    return () => {
+      if (isStandalone.value || !isPwaSupported.value) return null
+      return h(
+        'button',
+        {
+          type: 'button',
+          class: 'pwa-install-button',
+          onClick
+        },
+        '安装到桌面'
+      )
+    }
+  }
+})
 
 export default {
   extends: DefaultTheme,
@@ -57,7 +137,8 @@ export default {
                   scrolling: '0',
                   frameborder: '0'
                 })
-              ])
+              ]),
+              h(PwaInstallButton)
             ])
           ])
         ];

@@ -291,3 +291,21 @@
 @media (max-width: 640px) {
   .compare-grid { grid-template-columns: 1fr; }
 }
+
+.pwa-install-button {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.pwa-install-button:hover {
+  border-color: var(--vp-c-brand);
+  background: var(--vp-c-bg);
+}

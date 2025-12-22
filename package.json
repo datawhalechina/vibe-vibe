@@ -25,6 +25,7 @@
     "medium-zoom": "^1.1.0",
     "mermaid": "^11.12.1",
     "patch-package": "^8.0.1",
+    "vite-plugin-pwa": "^0.21.2",
     "vitepress": "^1.6.4",
     "vitepress-markdown-timeline": "^1.2.2",
     "vitepress-plugin-mermaid": "^2.0.17",
