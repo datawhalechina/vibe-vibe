@@ -30,6 +30,31 @@
 | 想直接动手做项目 | 基础篇 → 第4章 实战 |
 | 想找项目练手 | 实践篇 |
 
+### 私有化部署
+
+如果你想在本地或内网环境部署本教程站点，可以使用 Docker 快速部署：
+
+```bash
+# 1. 克隆项目
+git clone https://github.com/datawhalechina/vibe-vibe.git
+cd vibe-vibe
+
+# 2. 构建并启动服务
+docker-compose up -d
+
+# 3. 访问服务
+# 浏览器打开 http://localhost:1024
+```
+
+#### 自定义端口
+
+如需修改访问端口，编辑 `docker-compose.yml` 文件中的端口映射：
+
+```yaml
+ports:
+  - "1024:80"  # 将1024改为你想要的端口号
+```
+
 ### 教程定位
 
 国内首个系统化的 Vibe Coding 开源教程，分为四大板块：

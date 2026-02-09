@@ -1,0 +1,32 @@
+services:
+  vibevibe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vibevibe-docs:latest
+    container_name: vibevibe-app
+    restart: unless-stopped
+    ports:
+      - "1024:80"
+    environment:
+      - TZ=Asia/Shanghai
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - vibevibe-network
+    labels:
+      - "com.vibevibe.description=VibeVibe Documentation Service"
+      - "com.vibevibe.version=1.0"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  vibevibe-network:
+    driver: bridge
