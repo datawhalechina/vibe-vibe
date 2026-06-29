@@ -96,6 +96,12 @@ chapter: "第一章"
 | **CLI** | [Claude Code](https://claude.com/product/claude-code)、[Codex CLI](https://openai.com/)、[Gemini CLI](https://gemini.google.com/)、[Aider](https://aider.chat/)、[OpenCode](https://opencode.ai/) | [Qoder CLI](https://qoder.com/)、[iFlow CLI](https://iflow.cn/) |
 | **IDE** | [Cursor](https://cursor.com/)、[Windsurf](https://windsurf.com/)、[Zed](https://zed.dev/)、[GitHub Copilot](https://github.com/features/copilot) | [Trae](https://www.trae.cn/)、[Qoder](https://qoder.com/)、[CodeBuddy](https://copilot.tencent.com/) |
 
+::: tip 进一步对比阅读
+
+如果你正在比较 Cursor、Windsurf、Claude Code、Cline、GitHub Copilot、Trae、Aider、Continue 等工具，可以参考 [AI Coding Tools Guide 的 Cursor alternatives 对比](https://ai-coding-tools-guide.vercel.app/cursor-alternatives/)。它按开发工作流而不是单纯功能清单来整理，更适合辅助你判断哪类工具适合当前阶段。
+
+:::
+
 ::: tip Claude Code 的优势
 
 - **公开可用**：发布在 npm 仓库，无地域限制

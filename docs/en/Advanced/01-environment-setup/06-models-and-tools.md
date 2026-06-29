@@ -96,6 +96,12 @@ Most AI IDEs are built on **VS Code** (such as Cursor, Windsurf, and Trae), so t
 | **CLI** | [Claude Code](https://claude.com/product/claude-code), [Codex CLI](https://openai.com/), [Gemini CLI](https://gemini.google.com/), [Aider](https://aider.chat/), [OpenCode](https://opencode.ai/) | [Qoder CLI](https://qoder.com/), [iFlow CLI](https://iflow.cn/) |
 | **IDE** | [Cursor](https://cursor.com/), [Windsurf](https://windsurf.com/), [Zed](https://zed.dev/), [GitHub Copilot](https://github.com/features/copilot) | [Trae](https://www.trae.cn/), [Qoder](https://qoder.com/), [CodeBuddy](https://copilot.tencent.com/) |
 
+::: tip Further comparison
+
+If you are comparing Cursor, Windsurf, Claude Code, Cline, GitHub Copilot, Trae, Aider, Continue, and similar tools, see the [AI Coding Tools Guide comparison of Cursor alternatives](https://ai-coding-tools-guide.vercel.app/cursor-alternatives/). It is organized by developer workflow rather than only by feature lists, which can help you choose the right tool for your current stage.
+
+:::
+
 ::: tip Advantages of Claude Code
 
 - **Publicly available**: Published to the npm registry, with no regional restrictions
