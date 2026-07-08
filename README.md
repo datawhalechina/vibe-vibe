@@ -10,6 +10,9 @@
 <h1 align="center">Vibe Vibe </h1>
 
 # Vibe Vibe —— 人人都能学会的 AI 编程（Vibe Coding）指南
+
+[![Listed on TakoAPI](https://takoapi.com/api/badge/datawhalechina-vibe-vibe)](https://takoapi.com/agents/datawhalechina-vibe-vibe)
+
 > **面向零编程基础学习者的 AI 辅助编程系统化教程，从「我有一个想法」到「我做出了一个产品」，让人人都能成为 Builder。**
 
 点击以访问教程主页：www.vibevibe.cn
